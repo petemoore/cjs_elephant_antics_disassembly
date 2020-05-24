@@ -476,12 +476,21 @@ BDA1  19                 add hl,de
 BDA2  C1                 pop bc
 ```
 
+The map data is stored at 0xeb00, and there is a heap area at 0xd300-0xe6ff
+which is used to store data while the maps are decompressed between levels, but
+then is reused when the game is running as a buffer for writing display file
+data to in "CRT beam order".
 
-It looks like some kind of map data is stored at address 0xeb00, which is used
-to update data at address 0x8000, and that the screen layout is laid out at
-address 0xd300. The screen offset from map is stored in 0xb076 (y) and 0xb077
-(x) and CJ's map location is stored in 0xb078 (y) and 0xb079 (x).
+Graphics are stored at 0x8000, 32 bytes per graphic (16x16 pixels). In contrast
+to the display file, attribute file updates are rendered on-the-fly, based on a
+map at 0xea00 which is overlaid with level specific attribute updates.
 
+There are several system variables around 0xb000, some of the key ones being
+CJ's map position in 0xb078 (y) and 0xb079 (x) and the screen top-left map
+position in 0xb076 (y) and 0xb077 (x).
+
+I'll write up a more detailed explanation soon, I have lots of notes on paper
+that need cleaning up.
 
 ```
 79A0  21 03 0B           ld hl,$0B03      // H = 11, L = 3 (x=11, y=3 screen coords)
