@@ -121,7 +121,7 @@ func show(all []byte, m []byte, level int, width int) {
 			}
 		}
 	}
-	create("level"+strconv.Itoa(level+1)+".gif", img)
+	create("level"+strconv.Itoa(level+1)+".png", img)
 }
 
 func create(filename string, im image.Image) {

@@ -6,19 +6,19 @@ Based on the discoveries while disassembling the original code, I've managed to 
 
 ### Level 1 (France)
 
-![Level 1 - France](level1.gif)
+![Level 1 - France](level1.png)
 
 ### Level 2 (Switzerland)
 
-![Level 2 - Switzerland](level2.gif)
+![Level 2 - Switzerland](level2.png)
 
 ### Level 3 (Egypt)
 
-![Level 3 - Egypt](level3.gif)
+![Level 3 - Egypt](level3.png)
 
 ### Level 4 (Africa)
 
-![Level 4 - Africa](level4.gif)
+![Level 4 - Africa](level4.png)
 
 ## Tape files
 
